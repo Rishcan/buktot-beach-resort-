@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore the beaches, waterfalls, culture, and island adventures of Mindoro with Blue Sea Tourism.">
+<meta name="theme-color" content="#087eaa">
+<title>Blue Sea Tourism | Discover Mindoro</title>
+<style>
+:root{--navy:#073b5c;--blue:#087eaa;--aqua:#26c6c8;--pale:#eaf9fb;--ink:#17384a;--muted:#587180;--white:#fff;--sand:#fff7e8;--shadow:0 14px 35px rgba(7,59,92,.12);--radius:20px}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+a{color:inherit}img{display:block;max-width:100%}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 2px 15px rgba(7,59,92,.08)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--navy);font-size:1.15rem;letter-spacing:.2px}
+.logo{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--blue),var(--aqua));color:white;font-size:1.45rem;box-shadow:0 5px 14px #087eaa44}
+nav{display:flex;gap:20px;align-items:center}nav a{text-decoration:none;font-size:.9rem;font-weight:700;color:var(--navy)}nav a:hover{color:var(--blue)}
+.menu-btn{display:none;border:0;background:var(--pale);border-radius:10px;padding:10px;font-size:1.2rem}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;border:0;border-radius:999px;padding:13px 22px;font-weight:800;background:var(--blue);color:#fff;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:var(--navy)}.btn.light{background:#fff;color:var(--navy)}.btn.outline{background:transparent;border:1px solid #ffffffaa;color:white}
+.hero{min-height:630px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(4,39,62,.78),rgba(4,39,62,.12)),url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-content{padding:95px 0;max-width:680px}.eyebrow{font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;color:var(--aqua)}
+.hero h1{font-size:clamp(2.8rem,6vw,5.5rem);line-height:1.02;margin:14px 0 22px;letter-spacing:-2px}.hero p{font-size:1.15rem;max-width:590px;color:#eefbff}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trust-strip{background:var(--navy);color:#fff;padding:19px 0}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}.trust strong{display:block;color:#7de9ed;font-size:1.2rem}.trust span{font-size:.88rem}
+section{padding:86px 0;scroll-margin-top:82px}.section-head{max-width:720px;margin:0 auto 38px;text-align:center}.section-head .eyebrow{color:var(--blue)}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;color:var(--navy);margin:8px 0 14px;letter-spacing:-.7px}.section-head p,.muted{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.about-photo{position:relative}.about-photo img{height:440px;width:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}.photo-note{position:absolute;bottom:20px;left:-14px;background:#fff;padding:15px 20px;border-radius:14px;box-shadow:var(--shadow);font-weight:800;color:var(--navy)}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.check{background:var(--pale);border-radius:12px;padding:12px;font-weight:700;font-size:.92rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{border:1px solid #e3eef2;border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 7px 24px rgba(7,59,92,.06);transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.card img{width:100%;height:220px;object-fit:cover}.card-body{padding:22px}.tag{display:inline-block;background:var(--pale);color:var(--blue);font-weight:800;font-size:.76rem;padding:5px 10px;border-radius:999px}.card h3{color:var(--navy);margin:12px 0 7px;font-size:1.25rem}.card p{color:var(--muted);margin:0 0 14px}.card ul{padding-left:19px;color:var(--muted);font-size:.92rem}.price{font-size:1.45rem;color:var(--blue);font-weight:900}.price small{font-size:.78rem;color:var(--muted);font-weight:600}
+.soft{background:var(--pale)}.package-card{display:flex;flex-direction:column}.package-card .card-body{display:flex;flex-direction:column;flex:1}.package-card .btn{margin-top:auto;align-self:flex-start}.notice{font-size:.88rem;background:#fff7e8;border-left:4px solid #edb34e;padding:13px 16px;border-radius:8px;color:#705523;margin-top:24px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:15px;background:#d8eef2}.gallery img{width:100%;height:220px;object-fit:cover;transition:transform .4s}.gallery figure:hover img{transform:scale(1.06)}.gallery figcaption{position:absolute;bottom:0;left:0;right:0;color:#fff;padding:30px 13px 12px;background:linear-gradient(transparent,rgba(0,0,0,.72));font-weight:700}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.info-panel{padding:28px;border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)}.info-panel h3{margin-top:0;color:var(--navy)}.route-list{padding-left:20px}.map-frame{width:100%;height:100%;min-height:390px;border:0;border-radius:var(--radius)}
+.travel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tip{background:#fff;border:1px solid #e1eff2;border-radius:15px;padding:20px}.tip .emoji{font-size:1.6rem}.tip h3{color:var(--navy);margin:8px 0}.tip p{margin:0;color:var(--muted);font-size:.94rem}
+.booking{background:linear-gradient(140deg,#073b5c,#087eaa);color:white}.booking h2{color:white}.booking .section-head p{color:#d8f4fa}.booking-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}.booking-aside{padding:25px;background:#ffffff13;border:1px solid #ffffff2c;border-radius:var(--radius)}.booking-aside h3{margin-top:0}.booking-aside a{color:#9af3f3}.form{background:#fff;color:var(--ink);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.86rem;font-weight:800;color:var(--navy)}input,select,textarea{font:inherit;padding:12px;border:1px solid #c9dce3;border-radius:10px;width:100%;background:#fcfeff;color:var(--ink)}input:focus,select:focus,textarea:focus{outline:2px solid #79dfe4;border-color:var(--blue)}textarea{min-height:105px;resize:vertical}.form .btn{grid-column:1/-1;justify-self:start}.smallprint{font-size:.78rem;color:var(--muted);grid-column:1/-1}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-item{display:flex;gap:13px;margin:18px 0;align-items:flex-start}.contact-icon{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--pale);display:grid;place-items:center}.contact-item strong{display:block;color:var(--navy)}.contact-item span{color:var(--muted);overflow-wrap:anywhere}
+footer{background:#052b43;color:#d6e9f0;padding:38px 0 20px}.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:start}.footer-brand{color:white}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{color:#d6e9f0;text-decoration:none;font-size:.9rem}.copyright{border-top:1px solid #ffffff24;margin-top:28px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:.82rem;color:#a9c7d4}
+#form-status{grid-column:1/-1;color:var(--blue);font-weight:700;display:none}
+@media(max-width:900px){nav{gap:12px}nav a{font-size:.82rem}.cards{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.booking-layout{grid-template-columns:1fr}.travel-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.nav{min-height:68px}.menu-btn{display:block}nav{display:none;position:absolute;left:0;right:0;top:68px;background:white;padding:18px 5%;box-shadow:0 10px 15px #073b5c12;flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{padding:8px 0}.hero{min-height:570px}.hero-content{padding:75px 0}.trust{grid-template-columns:1fr;gap:12px}.about-grid,.location-grid,.contact-grid{grid-template-columns:1fr}.about-photo img{height:330px}.photo-note{left:10px}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:170px}section{padding:64px 0}.travel-grid{grid-template-columns:1fr}.form{grid-template-columns:1fr;padding:20px}.field.full,.form .btn,.smallprint,#form-status{grid-column:1}.footer-top{flex-direction:column}.map-frame{min-height:300px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#home" aria-label="Blue Sea Tourism home"><span class="logo">〰</span><span>BLUE SEA <span style="color:#087eaa">TOURISM</span></span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav id="mainNav" aria-label="Main navigation">
+   <a href="#home">Home</a><a href="#about">About</a><a href="#attractions">Attractions</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#guide">Travel Guide</a><a href="#contact">Contact</a>
+   <a class="btn" href="#booking">Plan Your Trip</a>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="container hero-content">
+  <div class="eyebrow">Your island story starts here</div>
+  <h1>Discover Mindoro.<br>Feel the Blue.</h1>
+  <p>Find your kind of paradise—from the clear waters and lively shores of Puerto Galera to peaceful lakes, waterfalls, mountain landscapes, and local culture across Mindoro.</p>
+  <div class="hero-actions"><a class="btn light" href="#packages">Explore Tour Packages <span aria-hidden="true">→</span></a><a class="btn outline" href="#attractions">Discover Mindoro</a></div>
+ </div>
+</section>
+<div class="trust-strip"><div class="container trust"><div><strong>Sea to Summit</strong><span>Beaches, forests, lakes and mountains</span></div><div><strong>Culture & Community</strong><span>Discover local heritage respectfully</span></div><div><strong>Your Trip, Your Pace</strong><span>Sample trips for different travelers</span></div></div></div>
+<section id="about">
+ <div class="container about-grid">
+  <div class="about-photo"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" alt="Sunlit waves washing onto a tropical shore" loading="lazy"><div class="photo-note">Mabuhay in Mindoro 🌊</div></div>
+  <div><div class="eyebrow">About Blue Sea Tourism</div><h2>More than a destination. A meaningful island experience.</h2>
+  <p>Blue Sea Tourism is a student-developed tourism website concept that introduces travelers to the natural beauty, outdoor adventures, and cultural richness of Mindoro in the Philippines. We aim to help visitors plan thoughtfully and travel responsibly.</p>
+  <p><strong>Our mission</strong> is to share helpful destination information and inspire safe, respectful, and memorable journeys. <strong>Our vision</strong> is to encourage tourism that values local communities, heritage, and the environment.</p>
+  <div class="checks"><div class="check">✓ Nature and beach escapes</div><div class="check">✓ Culture-focused experiences</div><div class="check">✓ Clear trip-planning information</div><div class="check">✓ Responsible travel reminders</div></div>
+  <p class="muted"><strong>Who is it for?</strong> Families, couples, student travelers, groups of friends, and nature lovers looking for a Mindoro getaway.</p>
+  <a class="btn" href="#guide">Read the Travel Guide</a></div>
+ </div>
+</section>
+<section class="soft" id="attractions">
+ <div class="container"><div class="section-head"><div class="eyebrow">Explore the island</div><h2>Places to put on your Mindoro list</h2><p>Mindoro includes Oriental Mindoro and Occidental Mindoro. Travel times and access vary by season, route, and local transport—confirm details before departure.</p></div>
+ <div class="cards">
+  <article class="card"><img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=80" alt="Tropical beach and blue sea" loading="lazy"><div class="card-body"><span class="tag">Beach & Diving</span><h3>Puerto Galera</h3><p>Known for bays, beaches, snorkeling, diving, and a range of visitor services.</p><a href="#booking">Ask about a coastal trip →</a></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80" alt="Waterfall flowing into a natural pool" loading="lazy"><div class="card-body"><span class="tag">Nature</span><h3>Waterfalls & Forest Trails</h3><p>Explore nature areas with a local guide, suitable footwear, and attention to weather conditions.</p><a href="#booking">Ask about a nature trip →</a></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Mountain lake and green landscape" loading="lazy"><div class="card-body"><span class="tag">Lake & Wildlife</span><h3>Naujan Lake Area</h3><p>Discover wetland scenery and birdlife in and around an important natural lake landscape.</p><a href="#booking">Ask about a lake visit →</a></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80" alt="Wildlife in a green natural habitat" loading="lazy"><div class="card-body"><span class="tag">Wildlife</span><h3>Tamaraw & Conservation</h3><p>Learn about Mindoro’s endemic tamaraw and the importance of protecting its habitat. Sightings are not guaranteed.</p><a href="#guide">Read responsible wildlife tips →</a></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Green hills and scenic countryside" loading="lazy"><div class="card-body"><span class="tag">Adventure</span><h3>Mountain Viewpoints</h3><p>Plan hikes and scenic outings only where access is permitted and conditions are safe.</p><a href="#booking">Ask about an outdoor trip →</a></div></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=80" alt="Deep blue sea and gentle ocean waves" loading="lazy"><div class="card-body"><span class="tag">Coastal Escape</span><h3>Mindoro’s Coastal Towns</h3><p>Find local beaches, seafood, markets, and community experiences across the island.</p><a href="#packages">See sample packages →</a></div></article>
+ </div></div>
+</section>
+<section id="packages">
+ <div class="container"><div class="section-head"><div class="eyebrow">Sample tour packages</div><h2>Choose your island adventure</h2><p>These are sample academic package concepts, not live offers. Prices are estimates per person in Philippine pesos and must be confirmed with real operators before booking.</p></div>
+ <div class="cards">
+  <article class="card package-card"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Waves on a bright tropical beach" loading="lazy"><div class="card-body"><span class="tag">1 Day · Relaxation</span><h3>Coastal Blue Escape</h3><p>A relaxed day for beach lovers and first-time visitors.</p><ul><li>Suggested beach visit</li><li>Free time for swimming where allowed</li><li>Basic trip coordination</li><li>Target: couples, friends, families</li></ul><div class="price">₱1,500 <small>/ person, estimate</small></div><p><small>Excludes transport to Mindoro, meals, personal purchases, and optional activities.</small></p><a class="btn" href="#booking" data-package="Coastal Blue Escape">Inquire Now</a></div></article>
+  <article class="card package-card"><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80" alt="Waterfall in a lush forest" loading="lazy"><div class="card-body"><span class="tag">2 Days / 1 Night · Nature</span><h3>Nature & Waterfall Trail</h3><p>A nature-focused getaway with time for scenery and a guided outdoor activity.</p><ul><li>Sample guided nature walk</li><li>One-night budget accommodation allowance</li><li>Suggested local dining stop</li><li>Target: students, friends, nature lovers</li></ul><div class="price">₱3,800 <small>/ person, estimate</small></div><p><small>Excludes long-distance transport, some meals, entrance fees not confirmed, and personal expenses.</small></p><a class="btn" href="#booking" data-package="Nature & Waterfall Trail">Inquire Now</a></div></article>
+  <article class="card package-card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Mountain lake surrounded by green hills" loading="lazy"><div class="card-body"><span class="tag">3 Days / 2 Nights · Discovery</span><h3>Mindoro Island Discovery</h3><p>A flexible itinerary combining coast, local food, scenery, and cultural learning.</p><ul><li>Suggested coastal and nature stops</li><li>Two-night accommodation allowance</li><li>Local culture and food experience</li><li>Target: small groups and explorers</li></ul><div class="price">₱6,500 <small>/ person, estimate</small></div><p><small>Excludes ferry/airfare, some meals, optional tours, and any fees not confirmed with providers.</small></p><a class="btn" href="#booking" data-package="Mindoro Island Discovery">Inquire Now</a></div></article>
+ </div>
+ <div class="notice"><strong>Sample itinerary reminder:</strong> Day 1—arrival and coastal visit; Day 2—guided nature activity or lake-area visit; Day 3—local market, cultural stop, and departure. Actual stops depend on the town selected, transport availability, weather, permits, and operator confirmation.</div>
+ </div>
+</section>
+<section class="soft" id="gallery">
+ <div class="container"><div class="section-head"><div class="eyebrow">A glimpse of paradise</div><h2>Mindoro inspiration gallery</h2><p>Eight travel-inspired images for this student project. The photos are illustrative and may not depict the exact named location.</p></div>
+ <div class="gallery">
+  <figure><img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=700&q=80" alt="Turquoise sea beside a tropical beach" loading="lazy"><figcaption>Blue-water escapes</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80" alt="Ocean waves rolling onto shore" loading="lazy"><figcaption>Coastal moments</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=700&q=80" alt="Waterfall surrounded by greenery" loading="lazy"><figcaption>Waterfall adventures</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=80" alt="Mountain scenery reflected in a lake" loading="lazy"><figcaption>Quiet landscapes</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=700&q=80" alt="Wildlife in a forest setting" loading="lazy"><figcaption>Nature and wildlife</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80" alt="Green hills in a scenic landscape" loading="lazy"><figcaption>Mountain horizons</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=700&q=80" alt="Blue ocean under daylight" loading="lazy"><figcaption>Ocean colors</figcaption></figure>
+  <figure><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="Sunny tropical beach with clear water" loading="lazy"><figcaption>Time to unwind</figcaption></figure>
+ </div></div>
+</section>
+<section id="location">
+ <div class="container"><div class="section-head"><div class="eyebrow">Plan your route</div><h2>Getting to Mindoro</h2><p>Choose your arrival town and confirm the latest ferry, bus, road, and local transport schedules before travel.</p></div>
+ <div class="location-grid">
+  <div class="info-panel"><h3>Travel basics</h3><ul class="route-list"><li><strong>From Metro Manila:</strong> Common routes use road transport to a Batangas port, then a ferry to a Mindoro port such as Puerto Galera or Calapan, depending on your destination.</li><li><strong>Within Mindoro:</strong> Buses, vans, tricycles, and local transport may be available depending on the town and time of day.</li><li><strong>Travel time:</strong> Varies with origin, ferry schedule, traffic, sea conditions, and onward road travel. Check operators for current estimates.</li><li><strong>Nearby experiences:</strong> Beaches, diving areas, waterfalls, lakes, markets, local food, and community-led cultural activities.</li><li><strong>Stay and dine:</strong> Compare licensed accommodation and local dining options near your chosen route; confirm availability and prices directly.</li></ul><a class="btn" href="#booking">Ask for Trip Planning</a></div>
+  <iframe class="map-frame" title="Map of Mindoro, Philippines" loading="lazy" src="https://maps.google.com/maps?q=Mindoro%2C%20Philippines&t=&z=8&ie=UTF8&iwloc=&output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+ </div></div>
+</section>
+<section class="soft" id="guide">
+ <div class="container"><div class="section-head"><div class="eyebrow">Travel smarter</div><h2>Your Mindoro travel guide</h2><p>A little preparation helps protect you, the communities you visit, and the places that make Mindoro special.</p></div>
+ <div class="travel-grid">
+  <article class="tip"><div class="emoji">☀️</div><h3>Best time to visit</h3><p>Generally, the drier months can be more convenient for outdoor trips, but tropical weather changes. Check the forecast and marine advisories before departure.</p></article>
+  <article class="tip"><div class="emoji">🎒</div><h3>What to bring</h3><p>Reusable water bottle, sun protection, insect repellent, comfortable shoes, light clothing, swimwear, basic medicines, and a waterproof bag.</p></article>
+  <article class="tip"><div class="emoji">🛟</div><h3>Safety first</h3><p>Follow lifeguard and guide instructions, wear a life jacket when required, avoid risky swimming, and do not hike or boat during unsafe conditions.</p></article>
+  <article class="tip"><div class="emoji">🌿</div><h3>Leave no trace</h3><p>Take rubbish with you, avoid single-use plastics where possible, do not touch or collect corals and wildlife, and stay on permitted trails.</p></article>
+  <article class="tip"><div class="emoji">🤝</div><h3>Respect local culture</h3><p>Ask permission before photographing people, dress appropriately at cultural or religious sites, and follow community guidance. Engage with Mangyan communities only through respectful, authorized experiences.</p></article>
+  <article class="tip"><div class="emoji">♿</div><h3>Accessibility & budget</h3><p>Confirm stairs, terrain, restroom access, and transport needs with providers. Set aside funds for transport, meals, fees, accommodation, and emergency expenses.</p></article>
+ </div>
+ <div class="notice"><strong>Emergency reminder:</strong> For urgent help, contact the local emergency services, police, coast guard, or your accommodation/operator. Save local contacts before traveling. This student website does not provide live emergency dispatch or real-time weather updates.</div>
+ </div>
+</section>
+<section class="booking" id="booking">
+ <div class="container"><div class="section-head"><div class="eyebrow">Let's plan something memorable</div><h2>Send a trip inquiry</h2><p>Tell us what kind of Mindoro experience you are interested in. This demonstration form opens your email app and does not store submissions online.</p></div>
+ <div class="booking-layout">
+  <div class="booking-aside"><h3>What happens next?</h3><p>Choose a package or request a custom itinerary. Before confirming a real trip, verify final pricing, inclusions, availability, transport schedules, and cancellation terms with the service provider.</p><p><strong>Academic project contact</strong><br>Replace the sample contact information with your own before publishing.</p><p>✉️ <a href="mailto:your-email@example.com">your-email@example.com</a><br>☎️ <a href="tel:+630000000000">+63 000 000 0000</a></p><p><small>Do not submit passwords, government ID numbers, payment-card details, or other sensitive personal data.</small></p></div>
+  <form class="form" id="inquiryForm">
+   <div class="field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" required placeholder="Your name"></div>
+   <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+   <div class="field"><label for="travelDate">Preferred travel date</label><input id="travelDate" name="travelDate" type="date"></div>
+   <div class="field"><label for="guests">Number of guests</label><select id="guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+   <div class="field full"><label for="package">Preferred package</label><select id="package" name="package"><option value="Not decided">Not decided yet</option><option>Coastal Blue Escape</option><option>Nature & Waterfall Trail</option><option>Mindoro Island Discovery</option><option>Custom itinerary</option></select></div>
+   <div class="field full"><label for="message">Questions or requests</label><textarea id="message" name="message" placeholder="Tell us what you'd like to explore..."></textarea></div>
+   <button class="btn" type="submit">Prepare Email Inquiry →</button>
+   <p class="smallprint">By sending an inquiry, you agree to use contact information only for trip-related communication. This demo has no online database.</p>
+   <p id="form-status" role="status"></p>
+  </form>
+ </div></div>
+</section>
+<section id="contact">
+ <div class="container contact-grid">
+  <div><div class="eyebrow">We’d love to hear from you</div><h2>Contact Blue Sea Tourism</h2><p class="muted">Replace these sample details with your real contact information before submitting or publishing your school project.</p>
+   <div class="contact-item"><div class="contact-icon">✉️</div><div><strong>Email</strong><span>your-email@example.com</span></div></div>
+   <div class="contact-item"><div class="contact-icon">☎️</div><div><strong>Mobile</strong><span>+63 000 000 0000 (sample)</span></div></div>
+   <div class="contact-item"><div class="contact-icon">📍</div><div><strong>Destination focus</strong><span>Mindoro, Philippines</span></div></div>
+   <div class="contact-item"><div class="contact-icon">🕒</div><div><strong>Inquiry hours</strong><span>Monday–Friday, 9:00 AM–5:00 PM (sample hours)</span></div></div>
+  </div>
+  <div class="info-panel"><h3>Useful links</h3><p>Use these resources to check destination information and publication steps.</p><ul><li><a href="https://www.travelorientalmindoro.ph/" target="_blank" rel="noopener">Travel Oriental Mindoro tourism portal</a></li><li><a href="https://old.ormindoro.gov.ph/" target="_blank" rel="noopener">Oriental Mindoro provincial website</a></li><li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages" target="_blank" rel="noopener">Official GitHub Pages guide</a></li></ul><h3>Privacy & disclaimer</h3><p class="muted">This is a student tourism website concept, not a registered travel agency or live booking service. Prices and itineraries are estimates for demonstration only. External images and maps load from third-party services. No inquiry data is saved by this page; the form prepares an email in the visitor’s own email app.</p></div>
+ </div>
+</section>
+</main>
+<footer><div class="container"><div class="footer-top"><a class="brand footer-brand" href="#home"><span class="logo">〰</span><span>BLUE SEA TOURISM<br><small style="font-weight:400;color:#b8dce8">Discover Paradise, Experience the Blue</small></span></a><div class="footer-links"><a href="#about">About</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#guide">Travel Guide</a><a href="#booking">Inquiries</a><a href="#contact">Contact</a></div></div><div class="copyright"><span>© <span id="year"></span> Blue Sea Tourism. Student project for academic purposes.</span><span>Travel responsibly. Respect Mindoro.</span></div></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('mainNav');
+menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+document.querySelectorAll('[data-package]').forEach(btn=>btn.addEventListener('click',()=>{document.getElementById('package').value=btn.dataset.package;}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('inquiryForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const d=new FormData(this);
+ const recipient='your-email@example.com'; // Replace with your real email address.
+ const subject=encodeURIComponent('Blue Sea Tourism inquiry: '+d.get('package'));
+ const body=encodeURIComponent(
+ 'Blue Sea Tourism Trip Inquiry\\n\\nName: '+d.get('fullName')+
+ '\\nEmail: '+d.get('email')+'\\nPreferred date: '+(d.get('travelDate')||'Not specified')+
+ '\\nGuests: '+d.get('guests')+'\\nPackage: '+d.get('package')+
+ '\\nMessage: '+(d.get('message')||'No additional message')+
+ '\\n\\nThis inquiry was prepared through the Blue Sea Tourism student website.'
+ );
+ document.getElementById('form-status').style.display='block';
+ document.getElementById('form-status').textContent='Opening your email app with the inquiry details. Replace the sample recipient email in the website code before publishing.';
+ window.location.href='mailto:'+recipient+'?subject='+subject+'&body='+body;
+});
+</script>
+</body>
+</html>
